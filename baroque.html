@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <py-script>
+count = 0
+
+while True:
+    try:
+        a = int(input("Input Baroque works number: "))
+        lst = ["ミス・オールサンデー", "ミス・ダブルフィンガー", "None", "ミス・ゴールデウィーク", "ミス・メリークリスマス", "ミス・バレンタイン", "ミス・マザーズデー", "ミス・ファーザーズデー", "ミス・マンデー", "ミス・ウェンズデー", "ミス・チューズデー", "ミス・サーズデー", "ミス・サタデー", "ミス・フライデー"]
+        lst2 = [f"Mr.{a}(クロコダイル)", f"Mr.{a}(ダズボーネス)", f"Mr{a}(ボン・クレー)" ,f"Mr.{a}(ギャルディールノ)", f"Mr.{a}(ペープ)", f"Mr.{a}(ジェム)", f"Mr.{a}", f"Mr.{a}",f"Mr.{a}(イガラム)", f"Mr.{a}", f"Mr.{a}", f"Mr.{a}", f"Mr.{a}",f"Mr.{a}"]
+        for i in range(len(lst)):
+            woman = lst[a]
+        for j in range(len(lst2)):
+            man = lst2[a]
+        print(f"{man}の相方は{woman}です")
+        break
+    except ValueError:
+        if count == 0:
+            print("正しい値が入力されませんでした。数字は半角で入力してください")
+            count += 1
+        elif count == 1:
+            print("2回入力間違えるとかバカなん?")
+            count += 1
+        else:
+            print("救いようのないバカで草")
+        continue
+    except IndexError:
+        print("バロックワークには13番目までしか存在しません。")
+    
+
+
+        
+    </py-script>
+</body>
+</html>
